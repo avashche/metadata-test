@@ -1,0 +1,11 @@
+{
+  "total_redemptions": "redemptions_conversion_in_period+redemptions_withdrawal_in_period+redemptions_termination_in_period",
+  "total_subscriptions": "subscriptions_add_in_period+subscriptions_new_in_period+subscriptions_conversion_in_period",
+  "net_flow_ratio": "CASE WHEN (total_redemptions) = 0 THEN 0 ELSE (total_subscriptions)/(total_redemptions) END",
+  "flow_indicator": "CASE WHEN (total_subscriptions-total_redemptions) > 0 THEN 'Positive' ELSE 'Negative' END",
+  "rank_gross_subscriptions": "rank()over(order by (total_subscriptions) desc)",
+  "rank_gross_redemptions": "rank()over(order by (total_redemptions) desc)",
+  "percent_total": "total_assets/sum(total_assets)over()",
+  "prior_total_redemptions": "lag(total_redemptions)OVER(PARTITION BY division_name,cbsa_id ORDER BY perioddate)",
+  "rate_total_redeptions": "CASE WHEN prior_total_redemptions = 0 THEN 0 ELSE (total_redemptions-prior_total_redemptions)/prior_total_redemptions END"
+}

@@ -1,0 +1,38 @@
+[
+	{
+		"dimension": "forecast",
+		"table_name": "fforecast",
+		"is_dimension": false,
+		"attributes": [ "next_period_forecast_descriptor", "next_period_forecast_metric", "next_period_forecast_indicator", "trailing_12_month_metrics (array)" ]
+	}, {
+	"dimension": "flow",
+	"table_name": "fflow",
+	"is_dimension": false,
+	"attributes": [ "perioddate","periodtype","subscriptions_new_in_period", "redemptions_withdrawal_in_period", "redemptions_termination_in_period", "source_model_code", "number_of_accounts", "subscriptions_conversion_in_period", "total_assets", "source_program_code", "redemptions_conversion_in_period", "subscriptions_add_in_period", "period_end_date" ]
+}, {
+	"dimension": "manufacturer",
+	"table_name": "dmanufacturer",
+	"is_dimension": true,
+	"attributes": [ "source_manufacturer_id", "manufacturer_name" ]
+}, {
+	"dimension": "advisor",
+	"table_name": "dadvisor",
+	"is_dimension": true,
+	"attributes": [ "source_advisor_id", "advisor_name", "branch_code" ]
+}, {
+	"dimension": "geography",
+	"table_name": "dgeography",
+	"is_dimension": true,
+	"attributes": [ "state_code", "country_code", "cbsa_id", "city_name", "division_name", "cbsa_name" ]
+}, {
+	"dimension": "channel",
+	"table_name": "dchannel",
+	"is_dimension": true,
+	"attributes": [ "channel_id", "channel_name" ]
+}, {
+	"dimension": "security",
+	"table_name": "dsecurity",
+	"is_dimension": true,
+	"attributes": [ "issue_name", "TEST_TYPE", "ticker", "asset_type", "fund_risk_rating_msoverall", "fund_expense_ratio_msprospectus", "fund_performance_rating_msoverall", "fund_rating_msoverall", "cusip", "asset_class", "fund_risk_rating_ms3yr", "source_security_id", "fund_investment_style" ]
+}
+]

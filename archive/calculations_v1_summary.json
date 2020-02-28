@@ -1,0 +1,10 @@
+{
+    "flow_indicator": "CASE WHEN (subscriptions_add_in_period+subscriptions_new_in_period+subscriptions_conversion_in_period-redemptions_conversion_in_period-redemptions_withdrawal_in_period-redemptions_termination_in_period) > 0 THEN 'positive' ELSE 'negative' END",
+    "net_flow_ratio": "cast(CASE WHEN (redemptions_conversion_in_period+redemptions_withdrawal_in_period+redemptions_termination_in_period) = 0 THEN 0 ELSE (subscriptions_add_in_period+subscriptions_new_in_period+subscriptions_conversion_in_period)/(redemptions_conversion_in_period+redemptions_withdrawal_in_period+redemptions_termination_in_period) END as decimal(19,2))",
+    "rank_gross_subscriptions": "rank()over(order by (subscriptions_add_in_period+subscriptions_new_in_period+subscriptions_conversion_in_period) desc)",
+    "pct_gross_subscriptions_division": "CAST(((subscriptions_add_in_period+subscriptions_new_in_period+subscriptions_conversion_in_period)/sum(subscriptions_add_in_period+subscriptions_new_in_period+subscriptions_conversion_in_period)over())*100 as decimal(29,2))",
+    "pct_gross_subscriptions_country": "CAST(((subscriptions_add_in_period+subscriptions_new_in_period+subscriptions_conversion_in_period)/sum(subscriptions_add_in_period+subscriptions_new_in_period+subscriptions_conversion_in_period)over())*100 as decimal(29,2))",
+    "rank_gross_redemptions": "rank()over(order by (redemptions_conversion_in_period+redemptions_withdrawal_in_period+redemptions_termination_in_period) desc)",
+    "pct_gross_redemptions_country": "CAST(((redemptions_conversion_in_period+redemptions_withdrawal_in_period+redemptions_termination_in_period)/sum(redemptions_conversion_in_period+redemptions_withdrawal_in_period+redemptions_termination_in_period)over())*100 as decimal(29,2))",
+    "pct_gross_redemptions_division": "CAST(((redemptions_conversion_in_period+redemptions_withdrawal_in_period+redemptions_termination_in_period)/sum(redemptions_conversion_in_period+redemptions_withdrawal_in_period+redemptions_termination_in_period)over())*100 as decimal(29,2))"
+}
