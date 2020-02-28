@@ -33,6 +33,6 @@
 	"dimension": "security",
 	"table_name": "dsecurity",
 	"is_dimension": true,
-	"attributes": [ "issue_name", "TEST_TYPE", "nmMYYYYYY_REOOOOO", "asset_type", "fund_risk_rating_msoverall", "fund_expense_ratio_msprospectus", "fund_performance_rating_msoverall", "fund_rating_msoverall", "cusip", "asset_class", "fund_risk_rating_ms3yr", "source_security_id", "fund_investment_style" ]
+	"attributes": [ "issue_name", "TEST_TYPE", "bnmMYYYYYY_REOOOOO", "asset_type", "fund_risk_rating_msoverall", "fund_expense_ratio_msprospectus", "fund_performance_rating_msoverall", "fund_rating_msoverall", "cusip", "asset_class", "fund_risk_rating_ms3yr", "source_security_id", "fund_investment_style" ]
 }
 ]
