@@ -1,0 +1,19 @@
+{
+    "periodType": "periodtype",
+    "product": "security",
+    "country": "country_code",
+    "division": "division_name",
+    "cbsaId": "cbsa_id",
+    "assetClass": "asset_class",
+    "type": "asset_type",
+    "investmentStyle": "fund_investment_style",
+    "managementType": "fund_management_type",
+    "msRatingOverall": "fund_rating_msoverall",
+    "msPerformanceRating3Yr": "fund_performance_rating_ms3yr",
+    "msRiskRating3Yr": "fund_risk_rating_ms3yr",
+    "msExpenseRatioRange": "fund_expense_ratio_msprospectus",
+    "totalSubscriptions":"total_subscriptions",
+    "totalRedemptions":"total_redemptions",
+    "netFlow": "net_flow",
+    "monthly":"1M"
+}
