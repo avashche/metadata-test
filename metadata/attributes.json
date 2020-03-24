@@ -1,6 +1,6 @@
 [
 	{
-		"dimension": "forecast FOR MASTER BRANCH",
+		"dimension": "forecast FOR MASTER BRANCH with update",
 		"table_name": "fforecast",
 		"is_dimension": false,
 		"attributes": [ "next_period_forecast_descriptor", "next_period_forecast_metric", "next_period_forecast_indicator", "trailing_12_month_metrics (array)" ]
